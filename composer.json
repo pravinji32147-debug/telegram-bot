@@ -1,0 +1,25 @@
+{
+    "name": "pravinji32147-debug/telegram-bot",
+    "description": "Production-ready Telegram Bot for Aadhaar to PAN conversion using Koyeb",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "files": [
+            "config.php",
+            "functions.php"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    }
+}
