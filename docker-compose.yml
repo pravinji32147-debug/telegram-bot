@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API_KEY=${API_KEY}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - APP_ENV=${APP_ENV:-production}
+    volumes:
+      - ./:/var/www/html
+      - ./logs:/var/www/html/logs
+    restart: unless-stopped
